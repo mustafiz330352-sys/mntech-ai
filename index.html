@@ -47,13 +47,40 @@
             gap: 20px;
             padding: 18px 0;
         }
+        
+        /* লোগো মূল স্টাইল - MN Tech এবং .ai উভয় অংশই উজ্জ্বল ও প্রমিনেন্ট সাদা করা হয়েছে */
         .logo {
             text-decoration: none;
-            font-size: 23px;
-            font-weight: 800;
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            color: #ffffff;
             white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
         }
-        .logo span { color: var(--accent); }
+        .logo span {
+            color: #ffffff !important;
+        }
+        
+        /* লোগো বক্স এবং প্রমিনেন্ট বোল্ড সাদা স্পার্ক আইকন */
+        .logo-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border: 2px solid #3b82f6;
+            border-radius: 8px;
+            background-color: rgba(59, 130, 246, 0.15);
+        }
+        .logo-box svg {
+            width: 22px;
+            height: 22px;
+            fill: #ffffff;
+        }
+
         .desktop-nav { display: flex; flex-wrap: wrap; gap: 22px; }
         .desktop-nav a, .mobile-nav a { text-decoration: none; }
         .desktop-nav a:hover { color: var(--accent); }
@@ -161,8 +188,9 @@
         ul { padding-left: 22px; color: var(--muted); }
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
         .contact-address { overflow-wrap: anywhere; }
-        footer { padding: 32px 0; border-top: 1px solid var(--border); text-align: center; }
-        footer p { margin: 8px 0; font-size: 14px; }
+        footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; }
+        footer .container { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+        footer p { margin: 0; font-size: 14px; color: var(--text); }
         .floating {
             position: fixed;
             bottom: 20px;
@@ -209,26 +237,32 @@
 
     <header>
         <div class="container nav">
-            <a class="logo" href="#home">MN Tech<span>.ai</span></a>
+            <!-- হেডারের লোগো -->
+            <a class="logo" href="#home">
+                <span class="logo-box">
+                    <svg viewBox="0 0 24 24"><path d="M11 21v-7H7l7-12v7h4l-7 12z"/></svg>
+                </span>
+                <span>MN Tech.ai</span>
+            </a>
 
             <nav class="desktop-nav" aria-label="Main navigation">
-                <a href="#about">About</a>
-                <a href="#vision">Vision</a>
-                <a href="#services">Services</a>
-                <a href="#work">Portfolio</a>
-                <a href="#location">Location</a>
-                <a href="#contact">Contact</a>
+                <a href="file:///C:/Users/user/Desktop/mntechai/index.html#about">About</a>
+                <a href="url?id=3">Vision</a>
+                <a href="file:///C:/Users/user/Desktop/mntechai/index.html#services">Services</a>
+                <a href="file:///C:/Users/user/Desktop/mntechai/index.html#work">Portfolio</a>
+                <a href="file:///C:/Users/user/Desktop/mntechai/index.html#location">Location</a>
+                <a href="file:///C:/Users/user/Desktop/mntechai/index.html#contact">Contact</a>
             </nav>
 
             <details class="mobile-nav">
                 <summary>Menu</summary>
                 <nav aria-label="Mobile navigation">
-                    <a href="#about">About</a>
-                    <a href="#vision">Vision</a>
-                    <a href="#services">Services</a>
-                    <a href="#work">Portfolio</a>
-                    <a href="#location">Location</a>
-                    <a href="#contact">Contact</a>
+                    <a href="file:///C:/Users/user/Desktop/mntechai/index.html#about">About</a>
+                    <a href="url?id=3">Vision</a>
+                    <a href="file:///C:/Users/user/Desktop/mntechai/index.html#services">Services</a>
+                    <a href="file:///C:/Users/user/Desktop/mntechai/index.html#work">Portfolio</a>
+                    <a href="file:///C:/Users/user/Desktop/mntechai/index.html#location">Location</a>
+                    <a href="file:///C:/Users/user/Desktop/mntechai/index.html#contact">Contact</a>
                 </nav>
             </details>
         </div>
@@ -249,12 +283,12 @@
                     </p>
 
                     <div class="buttons">
-                        <a class="btn primary" href="mailto:mustafiz330352@gmail.com?subject=Request%20for%20a%2015-minute%20call">Book a 15-min Call</a>
-                        <a class="btn whatsapp" href="https://wa.me/8801711330352" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+                        <a class="btn primary" href="file:///C:/Users/user/Desktop/mntechai/url?id=8">Book a 15-min Call</a>
+                        <a class="btn whatsapp" href="file:///C:/Users/user/Desktop/mntechai/url?id=9" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
                         <a class="btn" href="https://www.linkedin.com/in/mustafizur-rahman-35372a1a2" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
                         <a class="btn" href="https://github.com/mustafiz330352-sys" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
                         <a class="btn" href="https://mntechai.netlify.app/" target="_blank" rel="noopener noreferrer">Netlify Live Site ↗</a>
-                        <a class="btn" href="#work">Explore Projects</a>
+                        <a class="btn" href="file:///C:/Users/user/Desktop/mntechai/index.html#work">Explore Projects</a>
                     </div>
 
                     <div class="stats">
@@ -275,7 +309,7 @@
                         <span class="tag">AI APIs</span>
                     </div>
                     <div class="buttons" style="justify-content:center">
-                        <a class="btn primary" href="#contact">Get in Touch</a>
+                        <a class="btn primary" href="file:///C:/Users/user/Desktop/mntechai/index.html#contact">Get in Touch</a>
                     </div>
                 </aside>
             </div>
@@ -333,21 +367,21 @@
                         <h3>AI &amp; Workflow Automation</h3>
                         <p>Workflow planning and integrations using n8n, Make, APIs, and business tools.</p>
                         <p class="price">$50 <small>starting price</small></p>
-                        <div class="buttons"><a class="btn primary" href="#contact">Discuss Scope</a></div>
+                        <div class="buttons"><a class="btn primary" href="url?id=7">Discuss Scope</a></div>
                     </article>
 
                     <article class="card service">
                         <h3>Email &amp; WhatsApp Workflows</h3>
                         <p>Lead notifications and follow-up workflows, subject to platform access and API requirements.</p>
                         <p class="price">$40 <small>starting price</small></p>
-                        <div class="buttons"><a class="btn primary" href="#contact">Discuss Scope</a></div>
+                        <div class="buttons"><a class="btn primary" href="file:///C:/Users/user/Desktop/mntechai/index.html#contact">Discuss Scope</a></div>
                     </article>
 
                     <article class="card service">
                         <h3>Websites &amp; E-Commerce</h3>
                         <p>Business websites, storefront interfaces, and chatbot integration options based on your requirements.</p>
                         <p class="price">$80 <small>starting price</small></p>
-                        <div class="buttons"><a class="btn primary" href="#contact">Discuss Scope</a></div>
+                        <div class="buttons"><a class="btn primary" href="file:///C:/Users/user/Desktop/mntechai/index.html#contact">Discuss Scope</a></div>
                     </article>
                 </div>
 
@@ -378,7 +412,7 @@
                         <p>A digital agency website concept for my portfolio.</p>
                         <div class="buttons">
                             <a class="btn primary" href="https://aurelia-digital-website.netlify.app/" target="_blank" rel="noopener noreferrer">View Live Site ↗</a>
-                            <a class="btn" href="https://github.com/mustafiz330352-sys/aurelia-digital-website" target="_blank" rel="noopener noreferrer">View Code ↗</a>
+                            <a class="btn" href="url?id=14" target="_blank" rel="noopener noreferrer">View Code ↗</a>
                         </div>
                     </article>
 
@@ -387,7 +421,7 @@
                         <h3>Craftlabel Premium Menswear</h3>
                         <p>A menswear storefront website concept for my portfolio.</p>
                         <div class="buttons">
-                            <a class="btn primary" href="https://craftlabel-premium-menswear.netlify.app/" target="_blank" rel="noopener noreferrer">View Live Site ↗</a>
+                            <a class="btn primary" href="url?id=15" target="_blank" rel="noopener noreferrer">View Live Site ↗</a>
                             <a class="btn" href="https://github.com/mustafiz330352-sys/Craftlabel-Premium-Menswear" target="_blank" rel="noopener noreferrer">View Code ↗</a>
                         </div>
                     </article>
@@ -398,7 +432,7 @@
                         <p>An education institute website demo for my portfolio.</p>
                         <div class="buttons">
                             <a class="btn primary" href="https://veritas-institute-demo-1.netlify.app/" target="_blank" rel="noopener noreferrer">View Live Site ↗</a>
-                            <a class="btn" href="https://github.com/mustafiz330352-sys/veritas-institute-demo" target="_blank" rel="noopener noreferrer">View Code ↗</a>
+                            <a class="btn" href="file:///C:/Users/user/Desktop/mntechai/index.html#home8" target="_blank" rel="noopener noreferrer">View Code ↗</a>
                         </div>
                     </article>
 
@@ -417,7 +451,7 @@
                         <h3>Aether News</h3>
                         <p>A news and media website concept for my portfolio.</p>
                         <div class="buttons">
-                            <a class="btn primary" href="https://mustafiz-aether-news.netlify.app/" target="_blank" rel="noopener noreferrer">View Live Site ↗</a>
+                            <a class="btn primary" href="file:///C:/Users/user/Desktop/mntechai/index.html#about1" target="_blank" rel="noopener noreferrer">View Live Site ↗</a>
                         </div>
                     </article>
 
@@ -426,7 +460,7 @@
                         <h3>MN Tech.ai</h3>
                         <p>My own service and portfolio website for AI integration, automation, and web development.</p>
                         <div class="buttons">
-                            <a class="btn primary" href="https://mntechai.netlify.app/" target="_blank" rel="noopener noreferrer">View Live Site ↗</a>
+                            <a class="btn primary" href="file:///C:/Users/user/Desktop/mntechai/url?id=12" target="_blank" rel="noopener noreferrer">View Live Site ↗</a>
                             <a class="btn" href="https://github.com/mustafiz330352-sys/mntech-ai" target="_blank" rel="noopener noreferrer">View Code ↗</a>
                         </div>
                     </article>
@@ -439,7 +473,7 @@
                 <span class="eyebrow">Location</span>
                 <h2>Based in Dhaka, Bangladesh</h2>
                 <p>Available to discuss remote projects with businesses worldwide.</p>
-                <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Dhaka%2C%20Bangladesh" target="_blank" rel="noopener noreferrer">View Dhaka on Google Maps ↗</a>
+                <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Dhaka%2C%20Bangladesh" target="_blank" rel="noopener noreferrer">View Dhaka on Google Maps ↗</a>
             </div>
         </section>
 
@@ -455,7 +489,7 @@
                     <div class="card">
                         <h3>Email or WhatsApp</h3>
                         <p class="contact-address">
-                            <a href="mailto:mustafiz330352@gmail.com">mustafiz330352@gmail.com</a>
+                            <a href="file:///C:/Users/user/Desktop/mntechai/url?id=24">mustafiz330352@gmail.com</a>
                         </p>
                         <p>
                             <a href="tel:+8801711330352">+880 1711-330352</a>
@@ -486,18 +520,15 @@
 
     <footer>
         <div class="container">
-            <a class="logo" href="#home">MN Tech<span>.ai</span></a>
-            <p>© 2026 MN Tech.ai · Mustafizur Rahman</p>
-            <p>Business experience. Practical digital solutions.</p>
+            <!-- ফুটারের লোগো: হেডারের মতো হুবহু প্রমিনেন্ট এবং সাদা -->
+            <a class="logo" href="#home" style="margin-bottom: 15px; display: inline-flex;">
+                <span class="logo-box">
+                    <svg viewBox="0 0 24 24"><path d="M11 21v-7H7l7-12v7h4l-7 12z"/></svg>
+                </span>
+                <span>MN Tech.ai</span>
+            </a>
+            <p>&copy; 2026 MN Tech.ai. All rights reserved.</p>
         </div>
     </footer>
-
-    <a class="btn whatsapp floating"
-       href="https://wa.me/8801711330352"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Contact Mustafizur Rahman on WhatsApp, opens in a new tab">
-        WhatsApp ↗
-    </a>
 </body>
 </html>
